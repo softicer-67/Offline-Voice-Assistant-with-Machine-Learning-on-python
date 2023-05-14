@@ -55,3 +55,9 @@ def passive():
 	'''Функция заглушка при простом диалоге с ботом'''
 	pass
 
+def anecdote():
+	url = requests.get('http://rzhunemogu.ru/Widzh/Anekdot2.aspx')
+	soup = BeautifulSoup(url.text, "html.parser")
+	for i in soup.findAll('span'):
+		text = i.text
+		speaker(text)
