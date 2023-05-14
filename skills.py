@@ -2,6 +2,7 @@ import os
 import webbrowser
 import sys
 import subprocess
+from bs4 import BeautifulSoup
 
 import voice
 
